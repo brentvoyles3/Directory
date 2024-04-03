@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+}
+
+.editBox {
+  border-top: black;
+  text-align: center;
+}
+
+h1 {
+  font-style: italic;
+  margin-top: 25px;
+  margin-bottom: 12px;
+}
