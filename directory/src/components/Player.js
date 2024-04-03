@@ -1,4 +1,5 @@
 import Button from 'react-bootstrap/Button';
+import EditPlayer from './EditPlayer'
 
 function Player (props) {
     {/* Notes */}     
@@ -8,15 +9,19 @@ return(
   <div className="text-center space-y-2 sm:text-left">
     <div className="space-y-0.5">
       <p className="text-lg text-black font-semibold">
-        {props.name}
+        {props.fname}
+      </p>
+      <p className="text-lg text-black font-semibold">
+        {props.lname}
       </p>
       <p class="text-slate-500 font-medium">
-        {props.role}
+        {props.position}
       </p>
     </div>   
     <EditPlayer
     id={props.id}
-    name={props.name}
+    fname={props.fname}
+    lname={props.lname}
     position={props.position}
     updatePlayer={props.updatePlayer}
     />
