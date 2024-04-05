@@ -35,7 +35,7 @@ function EditPlayer(props) {
                         onSubmit={(e) => {
                             handleClose();
                             e.preventDefault();
-                            props.updatePlayer(props.id, fname, lname, position);
+                            props.updatePlayer(props.id, props.fname, props.lname, position);
                         }}
                         id="editmodal"
                         className="w-full max-w-sm"

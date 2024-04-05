@@ -1,5 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import EditPlayer from './EditPlayer'
+import PlayerStats from './PlayerStats'
 
 function Player (props) {
     {/* Notes */}     
@@ -10,20 +11,18 @@ return(
     <div className="space-y-0.5">
       <p className="text-lg text-black font-semibold">
         {props.fname}
-      </p>
-      <p className="text-lg text-black font-semibold">
+        <br></br>
         {props.lname}
       </p>
       <p class="text-slate-500 font-medium">
         {props.position}
       </p>
     </div>   
-    <EditPlayer
+    <PlayerStats
     id={props.id}
     fname={props.fname}
     lname={props.lname}
     position={props.position}
-    updatePlayer={props.updatePlayer}
     />
   </div>
 </div>

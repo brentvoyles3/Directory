@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 .App {
+  background: url('./images/BG.jpg');
   text-align: center;
 }
 
