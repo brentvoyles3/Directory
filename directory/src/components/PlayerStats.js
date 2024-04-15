@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import '../App.css';
 
 function PlayerStats(props) {
     const [fname, setfName] = useState(props.fname);
@@ -42,32 +43,32 @@ function PlayerStats(props) {
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
                                 <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                     for="name"
                                 >
-                                    Points: {6.9}
+                                    Points: {16.9}
                                 </label>
                             </div>
                             <div className="md:w-2/3">
                                 <label
-                                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                 className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                  for="name">
-                                    {/*{props.fname} Replace with points  pulled from api*/}
+                                    {/*{props.fname} Replace with points pulled from api*/}
                                  </label>
                             </div>
                         </div>
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
                                 <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                     for="name"
                                 >
-                                    Rebounds: {6.9}
+                                    Rebounds: {2.4}
                                 </label>
                             </div>
                             <div className="md:w-2/3">
                                 <label
-                                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                 className="block text-black-700 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                  for="name">
                                      {/*{props.fname} Replace with points  pulled from api*/}
                                  </label>
@@ -76,15 +77,15 @@ function PlayerStats(props) {
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
                                 <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                     for="name"
                                 >
-                                    Assists: {6.9}
+                                    Assists: {11.9}
                                 </label>
                             </div>
                             <div className="md:w-2/3">
                                 <label
-                                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                 className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                  for="name">
                                      {/*{props.fname} Replace with points  pulled from api*/}
                                      
@@ -94,15 +95,15 @@ function PlayerStats(props) {
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
                                 <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                     for="name"
                                 >
-                                    Blocks: {6.9}
+                                    Blocks: {0.4}
                                 </label>
                             </div>
                             <div className="md:w-2/3">
                                 <label
-                                 className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                 className="block text-black-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
                                  for="name">
                                     {/*{props.fname} Replace with points  pulled from api*/}
                                  </label>
@@ -111,10 +112,10 @@ function PlayerStats(props) {
                         <div className="md:flex md:items-center mb-6">
                             <div className="md:w-1/3">
                                 <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    className="block text-black-500 font-size-30px font-bold md:text-right mb-1 md:mb-0 pr-4"
                                     for="name"
                                 >
-                                    Steals: {6.9}
+                                    Steals: {0.7}
                                 </label>
                             </div>
                             <div className="md:w-2/3">
@@ -128,13 +129,19 @@ function PlayerStats(props) {
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <p classname="test">Scheat Pick: </p>
+                <button
+                        className="bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
+                        onClick={handleClose}
+                    >
+                        Add Player
+                    </button>
                     <button
                         className="bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
                         onClick={handleClose}
                     >
                         Close
                     </button>
+                  
                 </Modal.Footer>
             </Modal>
         </>

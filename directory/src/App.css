@@ -19,8 +19,10 @@ h1 {
   margin-bottom: 12px;
 }
 
-.test{
-  margin-right:100px;
+.left {
+  position:relative;
+  text-align: center;
+  margin-right: 100px;
 }
 
 

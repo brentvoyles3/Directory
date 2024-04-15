@@ -54,41 +54,6 @@ function App() {
       position: "Point Guard",
       img: Steph
     },
-    {
-      id:6,
-      fname: 'Klay', 
-      lname: 'Thompson',
-      position: "Point Guard",
-      img:defImage, 
-    },
-    {
-      id:7,
-      fname: 'Giannis', 
-      lname: 'Antekunopo',
-      position: "Forward",
-      img:defImage, 
-    },
-    {
-      id:8,
-      fname: 'Andre', 
-      lname: 'Drummond',
-      position: "Center",
-      img: defImage
-    },
-    {
-      id:9,
-      fname: 'Trae', 
-      lname: 'Young',
-      position: "Point Guard",
-      img:  defImage
-    },
-    {
-      id:10,
-      fname: 'Paul', 
-      lname: 'George',
-      position: "Forward",
-      img: defImage
-    },
   ]);
   const showPlayers = true;
 
