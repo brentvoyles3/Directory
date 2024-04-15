@@ -8,6 +8,7 @@ import Steph from "./images/Steph.jpg"
 import Tyrese from "./images/T.jpg"
 import Player from './components/Player';
 import React, { useEffect, useState } from 'react';
+import Header from "./components/Header"
 
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header/>
       {/* Ternary before the return */}
       <>
       <input className="editBox" placeholder='Filter By Name' type="text" onChange={(e) => {

@@ -128,6 +128,7 @@ function PlayerStats(props) {
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
+                    <p classname="test">Scheat Pick: </p>
                     <button
                         className="bg-slate-400 hover:bg-slate-500 text-white font-bold py-2 px-4 rounded"
                         onClick={handleClose}

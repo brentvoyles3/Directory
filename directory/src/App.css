@@ -10,6 +10,7 @@
 .editBox {
   border-top: black;
   text-align: center;
+  margin-top:10px;
 }
 
 h1 {
@@ -17,3 +18,9 @@ h1 {
   margin-top: 25px;
   margin-bottom: 12px;
 }
+
+.test{
+  margin-right:100px;
+}
+
+
