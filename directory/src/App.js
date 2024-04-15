@@ -54,6 +54,146 @@ function App() {
       position: "Point Guard",
       img: Steph
     },
+    {
+      id:6,
+      fname: 'Tyrese', 
+      lname: 'Halliburton',
+      position: "Point Guard",
+      img: Tyrese
+    },
+    {
+      id:7,
+      fname: 'Chris', 
+      lname: 'Paul',
+      position: "Point Guard",
+      img: Chris 
+    },
+    {
+      id:8,
+      fname: 'Lebron', 
+      lname: 'James',
+      position: "Forward",
+      img: Lebron 
+    },
+    {
+      id:9,
+      fname: 'Shai', 
+      lname: 'Gilgeous-Alexander',
+      position: "Shooting Guard",
+      img: Shai
+    },
+    {
+      id:10,
+      fname: 'Stephen', 
+      lname: 'Curry',
+      position: "Point Guard",
+      img: Steph
+    },
+    {
+      id:11,
+      fname: 'Tyrese', 
+      lname: 'Halliburton',
+      position: "Point Guard",
+      img: Tyrese
+    },
+    {
+      id:12,
+      fname: 'Chris', 
+      lname: 'Paul',
+      position: "Point Guard",
+      img: Chris 
+    },
+    {
+      id:13,
+      fname: 'Lebron', 
+      lname: 'James',
+      position: "Forward",
+      img: Lebron 
+    },
+    {
+      id:14,
+      fname: 'Shai', 
+      lname: 'Gilgeous-Alexander',
+      position: "Shooting Guard",
+      img: Shai
+    },
+    {
+      id:15,
+      fname: 'Stephen', 
+      lname: 'Curry',
+      position: "Point Guard",
+      img: Steph
+    },
+    {
+      id:16,
+      fname: 'Tyrese', 
+      lname: 'Halliburton',
+      position: "Point Guard",
+      img: Tyrese
+    },
+    {
+      id:17,
+      fname: 'Chris', 
+      lname: 'Paul',
+      position: "Point Guard",
+      img: Chris 
+    },
+    {
+      id:18,
+      fname: 'Lebron', 
+      lname: 'James',
+      position: "Forward",
+      img: Lebron 
+    },
+    {
+      id:19,
+      fname: 'Shai', 
+      lname: 'Gilgeous-Alexander',
+      position: "Shooting Guard",
+      img: Shai
+    },
+    {
+      id:20,
+      fname: 'Stephen', 
+      lname: 'Curry',
+      position: "Point Guard",
+      img: Steph
+    },
+    {
+      id:21,
+      fname: 'Tyrese', 
+      lname: 'Halliburton',
+      position: "Point Guard",
+      img: Tyrese
+    },
+    {
+      id:22,
+      fname: 'Chris', 
+      lname: 'Paul',
+      position: "Point Guard",
+      img: Chris 
+    },
+    {
+      id:23,
+      fname: 'Lebron', 
+      lname: 'James',
+      position: "Forward",
+      img: Lebron 
+    },
+    {
+      id:24,
+      fname: 'Shai', 
+      lname: 'Gilgeous-Alexander',
+      position: "Shooting Guard",
+      img: Shai
+    },
+    {
+      id:25,
+      fname: 'Stephen', 
+      lname: 'Curry',
+      position: "Point Guard",
+      img: Steph
+    },
   ]);
   const showPlayers = true;
 
