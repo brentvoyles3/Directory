@@ -4,10 +4,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import nba from "../images/nba.jpg"
 
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'StatZone', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  { name: 'StatScheat', href: '#', current: true },
+  { name: 'My Team', href: '#', current: false },
+  { name: 'League', href: '#', current: false },
+  { name: 'Schedule', href: '#', current: false },
 ]
 
 function classNames(...classes) {

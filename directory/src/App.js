@@ -4,6 +4,7 @@ import Lebron from "./images/L.jpg"
 import BG from "./images/BG.jpg"
 import Shai from "./images/S.jpg"
 import Chris from "./images/C.jpg"
+import Ant from "./images/Ant.jpg"
 import Steph from "./images/Steph.jpg"
 import Tyrese from "./images/T.jpg"
 import Player from './components/Player';
@@ -15,7 +16,7 @@ function App() {
   useEffect(() => {
     document.title = "StatScheat";  
   }, []);
-  {/* Can log, set variables, implement logic prior to return  
+  {/* log, set variables, implement logic prior to return if needed
   console.log('Starting to list... Outside the return') */}
   const [position, setPosition] = useState('Administrator');
   const [players, setPlayers] = useState([
@@ -56,145 +57,24 @@ function App() {
     },
     {
       id:6,
-      fname: 'Tyrese', 
-      lname: 'Halliburton',
+      fname: 'Anthony', 
+      lname: 'Edwards',
       position: "Point Guard",
-      img: Tyrese
-    },
-    {
-      id:7,
-      fname: 'Chris', 
-      lname: 'Paul',
-      position: "Point Guard",
-      img: Chris 
-    },
-    {
-      id:8,
-      fname: 'Lebron', 
-      lname: 'James',
-      position: "Forward",
-      img: Lebron 
-    },
-    {
-      id:9,
-      fname: 'Shai', 
-      lname: 'Gilgeous-Alexander',
-      position: "Shooting Guard",
-      img: Shai
-    },
-    {
-      id:10,
-      fname: 'Stephen', 
-      lname: 'Curry',
-      position: "Point Guard",
-      img: Steph
-    },
-    {
-      id:11,
-      fname: 'Tyrese', 
-      lname: 'Halliburton',
-      position: "Point Guard",
-      img: Tyrese
-    },
-    {
-      id:12,
-      fname: 'Chris', 
-      lname: 'Paul',
-      position: "Point Guard",
-      img: Chris 
-    },
-    {
-      id:13,
-      fname: 'Lebron', 
-      lname: 'James',
-      position: "Forward",
-      img: Lebron 
-    },
-    {
-      id:14,
-      fname: 'Shai', 
-      lname: 'Gilgeous-Alexander',
-      position: "Shooting Guard",
-      img: Shai
-    },
-    {
-      id:15,
-      fname: 'Stephen', 
-      lname: 'Curry',
-      position: "Point Guard",
-      img: Steph
-    },
-    {
-      id:16,
-      fname: 'Tyrese', 
-      lname: 'Halliburton',
-      position: "Point Guard",
-      img: Tyrese
-    },
-    {
-      id:17,
-      fname: 'Chris', 
-      lname: 'Paul',
-      position: "Point Guard",
-      img: Chris 
-    },
-    {
-      id:18,
-      fname: 'Lebron', 
-      lname: 'James',
-      position: "Forward",
-      img: Lebron 
-    },
-    {
-      id:19,
-      fname: 'Shai', 
-      lname: 'Gilgeous-Alexander',
-      position: "Shooting Guard",
-      img: Shai
-    },
-    {
-      id:20,
-      fname: 'Stephen', 
-      lname: 'Curry',
-      position: "Point Guard",
-      img: Steph
-    },
-    {
-      id:21,
-      fname: 'Tyrese', 
-      lname: 'Halliburton',
-      position: "Point Guard",
-      img: Tyrese
-    },
-    {
-      id:22,
-      fname: 'Chris', 
-      lname: 'Paul',
-      position: "Point Guard",
-      img: Chris 
-    },
-    {
-      id:23,
-      fname: 'Lebron', 
-      lname: 'James',
-      position: "Forward",
-      img: Lebron 
-    },
-    {
-      id:24,
-      fname: 'Shai', 
-      lname: 'Gilgeous-Alexander',
-      position: "Shooting Guard",
-      img: Shai
-    },
-    {
-      id:25,
-      fname: 'Stephen', 
-      lname: 'Curry',
-      position: "Point Guard",
-      img: Steph
+      img: Ant
     },
   ]);
+
+  function updatePlayer(id, newFName, newLName, newPosition, newImg) {
+    const updatePlayers = players.map((player) => {
+      if (id == player.id) {
+        //return new player
+        return {...player, fname: newFName, lname: newLName, position: newPosition, img: newImg };
+      }
+
+      return player;
+    });
+  }
+
   const showPlayers = true;
 
   return (
