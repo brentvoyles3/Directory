@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
+import '../App.css';
 
 
 function AddPlayer(props) {
     const [fname, setfName] = useState(props.fname);
     const [lname, setlName] = useState(props.lname);
-    const [position, setPosition] = useState(props.role);
-
+    const [position, setPosition] = useState(props.position);
+    const [img, setImg] = useState(props.img);
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
         <>
-            <button
+        <div className="AddButton">
+        <button
                 onClick={handleShow}
-                className="px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-white hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+                className="px-4 py-1 text-sm bg-white text-purple-600 font-semibold rounded-full border border-purple-200 hover:text-purple hover:bg-purple-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
             >
-                Update
+                Add Player
             </button>
+        </div>
 
             <Modal
                 show={show}
@@ -29,14 +31,13 @@ function AddPlayer(props) {
                 keyboard={false}
             >
                 <Modal.Header closeButton>
-                    <Modal.Title>Update Player</Modal.Title>
+                    <Modal.Title>Add Player</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <form
                         onSubmit={(e) => {
-                            handleClose();
                             e.preventDefault();
-                            props.updatePlayer(props.id, props.fname, props.lname, position);
+                            props.newPlayer(props.id, fname, lname, position, img);
                         }}
                         id="editmodal"
                         className="w-full max-w-sm"
@@ -45,7 +46,7 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="name"
+                                    for="fname"
                                 >
                                     First Name
                                 </label>
@@ -53,7 +54,7 @@ function AddPlayer(props) {
                             <div className="md:w-2/3">
                                 <input
                                     className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="name"
+                                    id="fname"
                                     type="text"
                                     value={fname}
                                     onChange={(e) => {
@@ -64,7 +65,7 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="name"
+                                    for="lname"
                                 >
                                     Last Name
                                 </label>
@@ -72,11 +73,11 @@ function AddPlayer(props) {
                             <div className="md:w-2/3">
                                 <input
                                     className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="name"
+                                    id="lname"
                                     type="text"
                                     value={lname}
                                     onChange={(e) => {
-                                        setfName(e.target.value);
+                                        setlName(e.target.value);
                                     }}
                                 />
                              
@@ -86,7 +87,7 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="role"
+                                    for="position"
                                 >
                                     Position
                                 </label>
@@ -94,11 +95,30 @@ function AddPlayer(props) {
                             <div className="md:w-2/3">
                                 <input
                                     className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="role"
+                                    id="position"
                                     type="text"
                                     value={position}
                                     onChange={(e) => {
                                         setPosition(e.target.value);
+                                    }}
+                                />
+                            </div>
+                            <div className="md:w-1/3">
+                                <label
+                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
+                                    for="img"
+                                >
+                                    Image:
+                                </label>
+                            </div>
+                            <div className="md:w-2/3">
+                                <input
+                                    className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                                    id="img"
+                                    type="text"
+                                    value={img}
+                                    onChange={(e) => {
+                                        setImg(e.target.value);
                                     }}
                                 />
                             </div>

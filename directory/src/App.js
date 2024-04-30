@@ -10,6 +10,9 @@ import Tyrese from "./images/T.jpg"
 import Player from './components/Player';
 import React, { useEffect, useState } from 'react';
 import Header from "./components/Header"
+import AddPlayer from "./components/AddPlayer"
+import Footer from "./components/Footer"
+import {v4 as uuidv4 } from 'uuid'; 
 
 
 function App() {
@@ -65,7 +68,7 @@ function App() {
   ]);
 
   function updatePlayer(id, newFName, newLName, newPosition, newImg) {
-    const updatePlayers = players.map((player) => {
+    const updatedPlayers = players.map((player) => {
       if (id == player.id) {
         //return new player
         return {...player, fname: newFName, lname: newLName, position: newPosition, img: newImg };
@@ -73,6 +76,18 @@ function App() {
 
       return player;
     });
+    setPlayers(updatedPlayers)
+  }
+
+  function newPlayer(fname, lname, position, img) {
+    const newPlayer = {
+      id: uuidv4(),
+      fname: fname,
+      lname: lname,
+      position: position,
+      img: img,
+    }
+    setPlayers([...players, newPlayer])
   }
 
   const showPlayers = true;
@@ -93,7 +108,9 @@ function App() {
       {players.map((player) => {
       console.log(player);
       return (
-      <Player 
+      <Player
+      key={player.id}
+      id={player.id} 
       fname={player.fname}
       lname={player.lname}
       position={player.position} 
@@ -102,7 +119,9 @@ function App() {
       );
             })}
     </div>
+    <AddPlayer newPlayer={newPlayer} />
     </>
+    <Footer/>
     </div>
 )}
 
