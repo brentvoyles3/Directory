@@ -26,8 +26,13 @@ h1 {
 }
 
 .AddButton{
-  margin-top: 75px;
-  margin-bottom: 305px;
+  margin-top: 55px;
+  margin-bottom: 15px;
+}
+
+.RemoveButton{
+ margin-top:10px; 
+ margin-bottom: 305px;
 }
 
 

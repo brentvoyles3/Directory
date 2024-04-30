@@ -3,7 +3,6 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import '../App.css';
 
-
 function AddPlayer(props) {
     const [fname, setfName] = useState(props.fname);
     const [lname, setlName] = useState(props.lname);
@@ -46,9 +45,9 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="fname"
+                                    for="name"
                                 >
-                                    First Name
+                                    Name
                                 </label>
                             </div>
                             <div className="md:w-2/3">
@@ -65,9 +64,9 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="lname"
+                                    for="name"
                                 >
-                                    Last Name
+                                    Position
                                 </label>
                             </div>
                             <div className="md:w-2/3">
@@ -87,26 +86,7 @@ function AddPlayer(props) {
                             <div className="md:w-1/3">
                                 <label
                                     className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="position"
-                                >
-                                    Position
-                                </label>
-                            </div>
-                            <div className="md:w-2/3">
-                                <input
-                                    className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="position"
-                                    type="text"
-                                    value={position}
-                                    onChange={(e) => {
-                                        setPosition(e.target.value);
-                                    }}
-                                />
-                            </div>
-                            <div className="md:w-1/3">
-                                <label
-                                    className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
-                                    for="img"
+                                    for="role"
                                 >
                                     Image:
                                 </label>
@@ -114,14 +94,15 @@ function AddPlayer(props) {
                             <div className="md:w-2/3">
                                 <input
                                     className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                    id="img"
+                                    id="role"
                                     type="text"
-                                    value={img}
+                                    value={position}
                                     onChange={(e) => {
-                                        setImg(e.target.value);
+                                        setPosition(e.target.value);
                                     }}
                                 />
                             </div>
+                        
                         </div>
                     </form>
                 </Modal.Body>

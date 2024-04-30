@@ -13,6 +13,7 @@ import Header from "./components/Header"
 import AddPlayer from "./components/AddPlayer"
 import Footer from "./components/Footer"
 import {v4 as uuidv4 } from 'uuid'; 
+import RemovePlayer from './components/RemovePlayer';
 
 
 function App() {
@@ -73,7 +74,6 @@ function App() {
         //return new player
         return {...player, fname: newFName, lname: newLName, position: newPosition, img: newImg };
       }
-
       return player;
     });
     setPlayers(updatedPlayers)
@@ -81,7 +81,6 @@ function App() {
 
   function newPlayer(fname, lname, position, img) {
     const newPlayer = {
-      id: uuidv4(),
       fname: fname,
       lname: lname,
       position: position,
@@ -109,7 +108,6 @@ function App() {
       console.log(player);
       return (
       <Player
-      key={player.id}
       id={player.id} 
       fname={player.fname}
       lname={player.lname}
@@ -120,6 +118,7 @@ function App() {
             })}
     </div>
     <AddPlayer newPlayer={newPlayer} />
+    <RemovePlayer />
     </>
     <Footer/>
     </div>
